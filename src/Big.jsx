@@ -1,6 +1,6 @@
 import Layout from "./components/Layout";
 import Home from "./Home";
-import Register from "./components/register";
+import Register from "./components/Register";
 import Login from "./components/Login";
 import Wishlist from "./components/Wishlist";
 import Basket from "./components/Basket";
