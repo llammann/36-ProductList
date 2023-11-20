@@ -25,10 +25,10 @@ function Basket({ products, setProducts, BasketState, setBasketState }) {
 
   return (
     <>
-      <h1>Basket</h1>
-      <SimpleGrid
+      <h1 className="wishHead" style={{ fontSize: "25px", backgroundColor:" rgb(100, 100, 213)", padding:"15px", marginBottom:"30px",color:"rgb(18, 18, 138)"}}>Basket</h1>
+      <SimpleGrid  style={{ padding: "90px"}}
         spacing={4}
-        templateColumns="repeat(auto-fill, minmax(270px, 1fr))"
+        templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       >
         {baskettarray.map((bas) => {
           console.log(bas);
@@ -47,8 +47,10 @@ function Basket({ products, setProducts, BasketState, setBasketState }) {
                     <h1>ID: {product.id}</h1>
                   </CardBody>
                   <CardFooter>
-                    <Button>{<HeartOutlined />}</Button>
+                    <Button style={{marginRight:"30px"}}
+                    >{<HeartOutlined />}</Button>
                     <Button
+                    style={{marginRight:"30px"}}
                       id={product.id}
                       onClick={(e) => {
                         // console.log("heyyy broo")

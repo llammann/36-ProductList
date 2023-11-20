@@ -4,6 +4,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 import Wishlist from "./components/Wishlist";
 import Basket from "./components/Basket";
+import Table from "./components/Table";
 import ReactDOM from "react-dom/client";
 
 import axios from "axios";
@@ -97,6 +98,17 @@ function Big() {
                 setProducts={setProducts}
                 BasketState={BasketState}
                 setBasketState={setBasketState}
+              />
+            }
+          />
+          <Route
+            path="Table"
+            element={
+              <Table
+                users={users}
+                setUsers={setUsers}
+                products={products}
+                setProducts={setProducts}
               />
             }
           />

@@ -8,13 +8,43 @@ function Login({ users, setUsers, isLogged, setisLogged }) {
   const pass = useRef("");
   return (
     <>
-      <FormControl>
-        <FormLabel>Name</FormLabel>
-        <Input id="nameInp" ref={name} type="text" />
-        <FormLabel>Password</FormLabel>
-        <Input id="passInp" ref={pass} type="password" />
+      <h1
+        className="wishHead"
+        style={{
+          fontSize: "25px",
+          backgroundColor: " rgb(100, 100, 213)",
+          padding: "15px",
+          marginBottom: "30px",
+          color:"rgb(18, 18, 138)"
+        }}
+      >
+        Login
+      </h1>
+      <FormControl
+        style={{
+          width: "30%",
+          margin: "auto",
+          backgroundColor: " rgb(192, 192, 226)",
+          padding:"50px 30px",borderRadius:"15px"
+        }}
+      >
+        <FormLabel style={{ fontSize: "20px" }}>Name</FormLabel>
+        <Input
+          id="nameInp"
+          ref={name}
+          type="text"
+          style={{ padding: "20px" }}
+        />
+        <FormLabel style={{ fontSize: "20px" }}>Password</FormLabel>
+        <Input
+          id="passInp"
+          ref={pass}
+          type="password"
+          style={{ padding: "20px", marginBottom: "20px" }}
+        />
         <Button
-          colorScheme="red"
+          style={{ padding: "10px", fontSize: "15px" }}
+          colorScheme="blue"
           onClick={(e) => {
             console.log(users);
             console.log("before log");

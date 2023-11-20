@@ -4,6 +4,9 @@ const Layout = () => {
   return (
     <>
       <nav>
+        <h1
+        className="wishHead" style={{ fontSize: "20px", color:" rgb(100, 100, 213)"}}
+         >Bags</h1>
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -19,6 +22,9 @@ const Layout = () => {
           </li>
           <li>
             <Link to="/Basket">Basket</Link>
+          </li>
+          <li>
+            <Link to="/Table">Table</Link>
           </li>
         </ul>
       </nav>

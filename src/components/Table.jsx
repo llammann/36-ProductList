@@ -12,6 +12,7 @@ import {
   TableCaption,
   TableContainer,
 } from "@chakra-ui/react";
+import { Input } from "antd";
 
 function Tablex({ products, setProducts, users, setUsers }) {
   console.log(products);
@@ -20,6 +21,17 @@ function Tablex({ products, setProducts, users, setUsers }) {
 
   return (
     <>
+      <p
+        style={{
+          fontSize: "25px",
+          backgroundColor: " rgb(100, 100, 213)",
+          padding: "15px",
+          marginBottom: "30px",
+          color: "rgb(18, 18, 138)",
+        }}
+      >
+        Table
+      </p>
       <Add products={products} setProducts={setProducts} />
       <TableContainer>
         <Table variant="striped" colorScheme="grey600">
@@ -47,17 +59,16 @@ function Tablex({ products, setProducts, users, setUsers }) {
                   <Td>{product.categoryFirst}</Td>
                   {/* EDIT */}
                   <Td>
-                    {users.find((elem) => elem.isAdmin === true).length ? (
-                      <Button
-                        colorScheme="facebook"
-                        id={product.id}
-                        onClick={(e) => {
-                          console.log("leman", e.target.id);
-                        }}
-                      >
-                        Edit
-                      </Button>
-                    ) : null}
+                    <Button
+                      colorScheme="facebook"
+                      id={product.id}
+                      onClick={(e) => {
+                        // console.log("leman", e.target.id);
+                        
+                      }}
+                    >
+                      Edit
+                    </Button>
                   </Td>
 
                   {/* DELETE */}

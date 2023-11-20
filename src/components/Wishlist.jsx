@@ -6,6 +6,7 @@ import { HeartFilled } from "@ant-design/icons";
 import { ShoppingFilled } from "@ant-design/icons";
 
 import { Button, ButtonGroup } from "@chakra-ui/react";
+import "../style/Wishlist.module.css";
 import {
   Card,
   CardHeader,
@@ -26,10 +27,12 @@ function Wishlist({ products, setProducts, WishlistState, setWishlistState }) {
 
   return (
     <>
-      <h1>Wishlist</h1>
-      <SimpleGrid
+      <p className="wishHead" style={{ fontSize: "25px", backgroundColor:" rgb(100, 100, 213)", padding:"15px", marginBottom:"30px",color:"rgb(18, 18, 138)"}}>
+        Wishlist
+      </p>
+      <SimpleGrid className="cards" style={{ padding: "90px"}}
         spacing={4}
-        templateColumns="repeat(auto-fill, minmax(270px, 1fr))"
+        templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
       >
         {wishlistarray.map((wish) => {
           console.log(wish);
@@ -49,6 +52,7 @@ function Wishlist({ products, setProducts, WishlistState, setWishlistState }) {
                   </CardBody>
                   <CardFooter>
                     <Button
+                    style={{marginRight:"30px"}}
                       id={product.id}
                       onClick={(e) => {
                         // console.log("heyyy broo")
@@ -72,7 +76,9 @@ function Wishlist({ products, setProducts, WishlistState, setWishlistState }) {
                     >
                       {<HeartOutlined />}
                     </Button>
-                    <Button>
+                    <Button
+                    style={{marginRight:"30px"}}
+                    >
                       <ShoppingFilled />
                     </Button>
                     <Button>{product.discountPercent}%</Button>
